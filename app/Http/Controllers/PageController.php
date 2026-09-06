@@ -77,17 +77,6 @@ class PageController extends Controller
                     'linkedin' => 'https://www.linkedin.com/in/dimas-setiaji-596b33335/',
                 ],
                 [
-                    'name' => 'Nama Anggota 3', 'nrp' => 'NRP belum diisi', 'origin' => 'Asal daerah belum diisi',
-                    'interest' => 'Data dan analisis', 'role' => 'Pengolah data',
-                    'bio' => 'Saya senang melihat data yang berantakan jadi sesuatu yang jelas dan berguna.',
-                    'photo' => 'images/members/anggota-3.jpg', 
-                    'education' => ['Nama sekolah dan kampus belum diisi'],
-                    'work' => ['Belum diisi'], 
-                    'organization' => ['Belum diisi'],
-                    'skills' => ['Python', 'SQL', 'Analisis data'], 
-                    'achievements' => ['Belum diisi'], 'linkedin' => null,
-                ],
-                [
                     'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
                     'interest' => 'software engineer & Cyber Security', 'role' => '',
                     'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
