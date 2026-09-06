@@ -11,12 +11,20 @@ class PageController extends Controller
         return view('home', [
             'students' => [
                 [
-                    'name' => 'Nama Anggota 1', 'nrp' => 'NRP belum diisi', 'class' => 'Kelas belum diisi',
-                    'interest' => 'Pemrograman web', 'role' => 'Pengembang antarmuka',
-                    'bio' => 'Saya suka merapikan tampilan supaya informasi mudah dibaca dan enak dipakai.',
-                    'photo' => 'images/members/anggota-1.jpg', 'education' => 'Nama sekolah dan kampus belum diisi',
-                    'work' => 'Belum diisi', 'organization' => 'Belum diisi',
-                    'skills' => ['HTML', 'CSS', 'Laravel'], 'achievements' => 'Belum diisi', 'linkedin' => null,
+                    'name' => 'Mitra Partogi',
+                    'nrp' => '5025241017',
+                    'class' => 'PBKK (B)',
+                    'interest' => 'Pemrograman kompetitif & sains data',
+                    'role' => 'Front End Engineer',
+                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi programmer andal di bidang pemrograman kompetitif dan sains data.',
+                    'photo' => 'images/members/anggota-1.jpg',
+                    'education' => "Institut Teknologi Sepuluh Nopember (ITS)\nS1 Teknik Informatika (2024 - Sekarang) · IPK: 3.77/4.00\n\nSMAN 15 Surabaya\nMIPA (2021 - 2024) · Nilai: 92.76/100.00",
+                    'work' => "Dinas Pendidikan Jawa Timur (Mei 2026 - Sekarang)\nFront End Engineer - Mengembangkan sistem PPDB/SPMB Jawa Timur berskala provinsi dengan arsitektur monorepo Next.js, React, dan TypeScript.\n\nInstitut Teknologi Sepuluh Nopember (Feb 2026 - Sekarang)\nAsisten Dosen Sistem Operasi & Asisten Dosen Struktur Data (C/C++)\n\nInstitut Teknologi Sepuluh Nopember (Sep 2025 - Sekarang)\nAsisten Dosen Dasar Pemrograman (C)",
+                    'organization' => "INCLENATION 2025 (Jul 2025 - Agu 2025)\nStaff Mentor - Pengenalan lingkungan FTEIC ITS bagi mahasiswa baru\n\nSchematics ITS 2025 (Mar 2025 - Sekarang)\nStaff NPC - National Programming Contest\n\nBarunastra ITS (Nov 2024 - Feb 2025)\nProgrammer Magang - Sistem visual dan kontrol roboboat autonomous\n\nSchematics ITS 2024 (Okt 2024)\nMagang Staff NLC (National Logic Competition)\n\nSKK LIBELS (Jan 2022 - Jan 2023)\nWakil Ketua - Organisasi Siswa Kristen SMAN 15 Surabaya\n\nDHELIBELS (Agu 2022 - Apr 2024)\nDuta Hemat Energi - Program KESDM RI & IIEE",
+                    'skills' => ['C/C++', 'Python', 'HTML', 'TypeScript', 'Next.js', 'React', 'Microsoft Office', 'Google Spreadsheets'],
+                    'achievements' => "Juara 1 Competitive Programming - PINGFEST UNS 2025\nJuara 1 Duta Hemat Energi Jawa Timur 2023 (IIEE, KESDM RI, APEC)\nPembicara Utama di APEC Youngsters Forum (Mei 2023)\nJuara 1 International Brain Challenge 2024 (Telkom University)\nJuara 2 Nachrichten Lesen Nasional 2023 (UNESA)\nFinalis Electra 2023 (Teknik Elektro ITS)",
+                    'linkedin' => 'http://www.linkedin.com/in/mitra-partogi',
+                    'email' => 'mitrapartogi@gmail.com',
                 ],
                 [
                     'name' => 'Nama Anggota 2', 'nrp' => 'NRP belum diisi', 'class' => 'Kelas belum diisi',

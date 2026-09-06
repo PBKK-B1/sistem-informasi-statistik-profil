@@ -20,6 +20,8 @@ class PageTest extends TestCase
         $this->get('/')
             ->assertSeeText('Enam orang, minat yang beragam')
             ->assertSeeText('6 mahasiswa')
+            ->assertSeeText('Mitra Partogi')
+            ->assertSeeText('5025241017')
             ->assertSeeText('Nama Anggota 6')
             ->assertSeeText('Koordinator proyek');
     }
