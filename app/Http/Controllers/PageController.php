@@ -48,15 +48,33 @@ class PageController extends Controller
                     'linkedin' => 'http://www.linkedin.com/in/mitra-partogi',
                 ],
                 [
-                    'name' => 'Nama Anggota 2', 'nrp' => 'NRP belum diisi', 'origin' => 'Asal daerah belum diisi',
-                    'interest' => 'Data dan analisis', 'role' => 'Pengolah data',
-                    'bio' => 'Saya senang melihat data yang berantakan jadi sesuatu yang jelas dan berguna.',
-                    'photo' => 'images/members/anggota-2.jpg', 
-                    'education' => ['Nama sekolah dan kampus belum diisi'],
-                    'work' => ['Belum diisi'], 
-                    'organization' => ['Belum diisi'],
-                    'skills' => ['Python', 'SQL', 'Analisis data'], 
-                    'achievements' => ['Belum diisi'], 'linkedin' => null,
+                    'name' => 'Dimas Setiaji',
+                    'nrp' => '5025241056', 
+                    'origin' => 'Malang, Jawa Timur',
+                    'interest' => 'Software Development, Game Development, dan Interactive Systems',
+                    'role' => 'Software Developer',
+                    'bio' => 'Motivated to contribute to interactive projects and continuously improving technical and creative skills.',
+                    'photo' => 'images/members/anggota-2.png',
+                    'education' => [
+                        'SMA Negeri 1 Kepanjen (2021 - 2024)',
+                        'Institut Teknologi Sepuluh Nopember (2024 - Sekarang)'
+                    ],
+                    'work' => [
+                        'Teaching Assistant Dasar Pemrograman & Struktur Data ITS (2025 - Sekarang)',
+                        'OSN Informatics Mentor SMAN 1 Kepanjen (2023 - 2024)',
+                        'Assistant Mentor SSA Organization Malang (2024)'
+                    ],
+                    'organization' => [
+                        'Problem Setter & Liaison Officer National Programming Competition ITS (2025)',
+                        'Anggota Karya Ilmiah Remaja (KIR) Kabupaten Malang (2023 - 2024)',
+                        'Anggota OSN Informatics Club Kabupaten Malang (2022 - 2023)'
+                    ],
+                    'skills' => [
+                        'C', 'C++', 'C#', 'HTML', 'CSS', 'UI/UX Design', 'Figma', 'Game Mechanics Design'
+                    ],
+                    'achievements' => [
+                    ],
+                    'linkedin' => 'https://www.linkedin.com/in/dimas-setiaji-596b33335/',
                 ],
                 [
                     'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
