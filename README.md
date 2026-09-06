@@ -1,6 +1,6 @@
-# Sistem Informasi Statik Profil Mahasiswa ITS
+# Sistem Informasi Statik Profil Kelompok 1
 
-Website profil akademik Mitra Partogi (5025241017), Teknik Informatika ITS.
+Website profil akademik enam anggota Kelompok 1, Teknik Informatika ITS.
 
 ## Arsitektur
 
@@ -46,4 +46,4 @@ Koneksi internet diperlukan untuk memuat Bootstrap dari CDN.
 php artisan test
 ```
 
-Pengujian mencakup halaman profil, layout, empat operasi, angka negatif/desimal, hasil nol, dan input tidak valid. Kalkulator menggunakan aritmetika floating point PHP untuk perhitungan sederhana.
+Pengujian mencakup halaman profil Kelompok 1 dengan enam biodata, layout, empat operasi, angka negatif/desimal, hasil nol, dan input tidak valid. Kalkulator menggunakan aritmetika floating point PHP untuk perhitungan sederhana.

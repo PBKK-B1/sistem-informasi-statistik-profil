@@ -9,17 +9,19 @@ class PageTest extends TestCase
 {
     public function test_profile_pages_render_with_shared_navigation(): void
     {
-        foreach (['/' => 'Mitra Partogi', '/about' => 'Teknik Informatika ITS', '/project-idea' => 'ITS Academic Assistant'] as $url => $text) {
+        foreach (['/' => 'Kelompok 1', '/about' => 'Teknik Informatika ITS', '/project-idea' => 'ITS Academic Assistant'] as $url => $text) {
             $this->get($url)
                 ->assertOk()
                 ->assertSeeText($text)
-                ->assertSeeText('Laravel Sandbox - Mitra Partogi')
+                ->assertSeeText('Kelompok 1 - Teknik Informatika ITS')
                 ->assertSee('aria-current="page"', false);
         }
 
         $this->get('/')
-            ->assertSeeText('5025241017')
-            ->assertSeeText('Mahasiswa Aktif');
+            ->assertSeeText('Enam orang, minat yang beragam')
+            ->assertSeeText('6 mahasiswa')
+            ->assertSeeText('Nama Anggota 6')
+            ->assertSeeText('Koordinator proyek');
     }
 
     #[DataProvider('calculations')]
