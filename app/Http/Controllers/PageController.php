@@ -79,26 +79,6 @@ class PageController extends Controller
                 [
                     'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
                     'interest' => 'software engineer & Cyber Security', 'role' => '',
-                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer',
-                    'photo' => 'images/members/anggota-3.jpeg',
-                    'education' => [
-                        "Institut Teknologi Sepuluh Nopember (ITS)\nS1 Teknik Informatika (2024 - Sekarang) · IPK: 3.61/4.00",
-                        "SMAN 1 Pontianak\nMIPA (2020 - 2023) · Nilai: 89.98/100.00",
-                    ],
-                    'work' => [
-                        "Asisten Dosen Struktur Data (C/C++)",
-                        "Institut Teknologi Sepuluh Nopember (Sep 2025 - Sekarang)\nAsisten Dosen Dasar Pemrograman (C)",
-                    ],
-                    'organization' => [
-                        'Staf Divisi Riset dan Teknologi, Himpunan Mahasiswa Teknik Computer-Informatika ITS (2024-sekarang)',
-                    ],
-                    'skills' => ['C/C++'],
-                    'achievements' => [],
-                    'linkedin' => 'http://www.linkedin.com/in/frenaldyh',
-                ],
-                [
-                    'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
-                    'interest' => 'software engineer & Cyber Security', 'role' => '',
                     'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
                     'photo' => 'images/members/anggota-4.png',
                     'education' => [
