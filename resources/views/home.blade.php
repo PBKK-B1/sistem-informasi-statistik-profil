@@ -38,12 +38,11 @@
                                     <h3 class="h4 mb-0">{{ $student['name'] }}</h3>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-4">{{ $student['bio'] }}</p>
+                            <p class="student-bio text-muted small mb-4">{{ $student['bio'] }}</p>
                             <dl class="row mb-0 profile-detail">
                                 <dt class="col-4 text-muted fw-normal mb-1">NRP</dt><dd class="col-8 fw-semibold mb-3">{{ $student['nrp'] }}</dd>
-                                <dt class="col-4 text-muted fw-normal mb-1">Kelas</dt><dd class="col-8 fw-semibold mb-3">{{ $student['class'] }}</dd>
+                                <dt class="col-4 text-muted fw-normal mb-1">Asal daerah</dt><dd class="col-8 fw-semibold mb-3">{{ $student['origin'] }}</dd>
                                 <dt class="col-4 text-muted fw-normal mb-1">Minat</dt><dd class="col-8 fw-semibold mb-3">{{ $student['interest'] }}</dd>
-                                <dt class="col-4 text-muted fw-normal mb-1">Peran</dt><dd class="col-8 fw-semibold mb-0">{{ $student['role'] }}</dd>
                             </dl>
                             <button type="button" class="btn btn-outline-primary w-100 mt-4" data-bs-toggle="modal" data-bs-target="#profileModal{{ $loop->iteration }}">
                                 Lihat profil lengkap
@@ -77,7 +76,7 @@
                             <div class="text-center text-sm-start">
                                 <p class="text-muted mb-2">{{ $student['bio'] }}</p>
                                 @if ($student['linkedin'])
-                                    <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">LinkedIn / Profil profesional</a>
+                                    <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Profil LinkedIn</a>
                                 @else
                                     <span class="small text-muted">Tautan profesional belum diisi</span>
                                 @endif
@@ -87,25 +86,41 @@
                             <div class="col-md-6">
                                 <div class="profile-section">
                                     <p class="eyebrow mb-2">Pendidikan</p>
-                                    <p class="mb-0">{{ $student['education'] }}</p>
+                                    <ul class="mb-0 ps-3">
+                                        @foreach ($student['education'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="profile-section">
-                                    <p class="eyebrow mb-2">Pengalaman kerja &amp; asisten dosen</p>
-                                    <p class="mb-0">{{ $student['work'] }}</p>
+                                    <p class="eyebrow mb-2">Pengalaman Profesional</p>
+                                    <ul class="mb-0 ps-3">
+                                        @foreach ($student['work'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="profile-section">
                                     <p class="eyebrow mb-2">Organisasi &amp; kepanitiaan</p>
-                                    <p class="mb-0">{{ $student['organization'] }}</p>
+                                    <ul class="mb-0 ps-3">
+                                        @foreach ($student['organization'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="profile-section">
                                     <p class="eyebrow mb-2">Prestasi &amp; penghargaan</p>
-                                    <p class="mb-0">{{ $student['achievements'] }}</p>
+                                    <ul class="mb-0 ps-3">
+                                        @foreach ($student['achievements'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-12">

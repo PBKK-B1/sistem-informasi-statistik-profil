@@ -27,6 +27,7 @@
         .btn-primary { background: var(--profile-blue); border-color: var(--profile-blue); }
         .text-muted { color: #5d6d82 !important; }
         .profile-detail { overflow-wrap: anywhere; }
+        .student-bio, .profile-detail dd, .profile-section p, .profile-section li { text-align: justify; }
         .profile-section { height: 100%; padding: 1rem; border: 1px solid #e1e7f0; border-radius: .85rem; background: #f8fafd; }
         .gallery-frame { border-radius: 1rem; overflow: hidden; border: 1px solid #dce5f2; background: #fff; }
         .gallery-frame img { width: 100%; height: 100%; object-fit: cover; }
