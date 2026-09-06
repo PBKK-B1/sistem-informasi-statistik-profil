@@ -77,6 +77,49 @@ class PageController extends Controller
                     'linkedin' => 'https://www.linkedin.com/in/dimas-setiaji-596b33335/',
                 ],
                 [
+                    'name' => 'Steven Alvin Christian',
+                    'nrp' => '5025241116',
+                    'origin' => 'Bontang, Kalimantan Timur',
+
+                    'interest' => 'Data Scientist & AI Engineer',
+                    'role' => '',
+
+                    'bio' => 'Mahasiswa Teknik Informatika ITS yang tertarik pada bidang Data Science, Artificial Intelligence, dan Machine Learning.',
+
+                    'photo' => 'images/members/anggota-3.png',
+
+                    'education' => [
+                        "Institut Teknologi Sepuluh Nopember (2024 - Sekarang)",
+                        "SMA YPVDP Bontang (2021 - 2024)",
+                    ],
+
+                    'work' => [
+                        "Koordinator Asisten Dosen Dasar Pemrograman ITS (Agu 2026 - Sekarang) ",
+                        "Asisten Dosen Struktur Data ITS (Feb 2026 - Juli 2026)",
+                        "Asisten Dosen Dasar Pemrograman ITS (Agu 2025 - Des 2025)",
+                        "Asisten Dosen Kalkulus 1 ITS (Agu 2025 - Des 2025)",
+                    ],
+
+                    'organization' => [
+                        "Expert Staff Schematics NPC (Apr 2026 - Sekarang)",
+                    ],
+
+                    'skills' => [
+                        'Python',
+                        'C/C++',
+                        'SQL',
+                        'Tableau',
+                        'Microsoft Office',
+                    ],
+                    'achievements' => [
+                        "Winner Energy Policy Case Competition 2025",
+                        "Best 30 Awardee PFMuda Social Innovation 2025",
+                        "Finalist Schematics National Programming Contest Senior 2024",
+                    ],
+
+                    'linkedin' => 'http://www.linkedin.com/in/stevenalvinchristian',
+                ],
+                [
                     'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
                     'interest' => 'software engineer & Cyber Security', 'role' => '',
                     'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
