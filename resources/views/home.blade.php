@@ -16,7 +16,7 @@
         <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
             <div>
                 <p class="eyebrow mb-1">Kenalan dulu</p>
-                <h2 class="h3 mb-0">Enam orang dengan peran yang saling melengkapi</h2>
+                <h2 class="h3 mb-0">Enam orang, minat yang beragam</h2>
             </div>
             <span class="badge rounded-pill text-primary-emphasis bg-primary-subtle px-3 py-2">{{ count($students) }} mahasiswa</span>
         </div>
@@ -74,12 +74,17 @@
                                 @endif
                             </div>
                             <div class="text-center text-sm-start">
-                                <p class="text-muted mb-2">{{ $student['bio'] }}</p>
-                                @if ($student['linkedin'])
-                                    <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Profil LinkedIn</a>
-                                @else
-                                    <span class="small text-muted">Tautan profesional belum diisi</span>
-                                @endif
+                                <p class="text-muted mb-3">{{ $student['bio'] }}</p>
+                                <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-start">
+                                    @if ($student['linkedin'])
+                                        <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Profil LinkedIn</a>
+                                    @else
+                                        <span class="small text-muted">Tautan profesional belum diisi</span>
+                                    @endif
+                                    @if (! empty($student['email']))
+                                        <a href="mailto:{{ $student['email'] }}" class="btn btn-sm btn-outline-secondary">Email: {{ $student['email'] }}</a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         <div class="row g-4">
