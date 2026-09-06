@@ -68,11 +68,10 @@
     <section class="card mt-4">
         <div class="card-body p-4 p-md-5 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
             <div>
-                <p class="eyebrow mb-1">Butuh referensi cepat?</p>
-                <h2 class="h4 mb-2">Tombol ini langsung mengarah ke Google.</h2>
-                <p class="text-muted mb-0">Bisa dipakai sebagai shortcut sederhana untuk membuka pencarian atau situs eksternal yang kamu butuhkan.</p>
+                <p class="eyebrow mb-1">Ingin mengetahui lebih lanjut?</p>
+                <h2 class="h4 mb-2">Kunjungi Website Resmi Teknik Informatika ITS.</h2>
             </div>
-            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2 fw-semibold">Buka Google</a>
+            <a href="https://www.its.ac.id/informatika" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2 fw-semibold">Buka Website</a>
         </div>
     </section>
 @endsection
