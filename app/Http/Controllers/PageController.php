@@ -97,15 +97,24 @@ class PageController extends Controller
                     'linkedin' => 'http://www.linkedin.com/in/frenaldyh',
                 ],
                 [
-                    'name' => 'Nama Anggota 4', 'nrp' => 'NRP belum diisi', 'origin' => 'Asal daerah belum diisi',
-                    'interest' => 'Data dan analisis', 'role' => 'Pengolah data',
-                    'bio' => 'Saya senang melihat data yang berantakan jadi sesuatu yang jelas dan berguna.',
-                    'photo' => 'images/members/anggota-2.jpg', 
-                    'education' => ['Nama sekolah dan kampus belum diisi'],
-                    'work' => ['Belum diisi'], 
-                    'organization' => ['Belum diisi'],
-                    'skills' => ['Python', 'SQL', 'Analisis data'], 
-                    'achievements' => ['Belum diisi'], 'linkedin' => null,
+                    'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
+                    'interest' => 'software engineer & Cyber Security', 'role' => '',
+                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
+                    'photo' => 'images/members/anggota-4.png',
+                    'education' => [
+                        "Institut Teknologi Sepuluh Nopember (ITS)\nS1 Teknik Informatika (2024 - Sekarang) · IPK: 3.61/4.00",
+                        "SMAN 1 Pontianak\nMIPA (2020 - 2023) · Nilai: 89.98/100.00",
+                    ],
+                    'work' => [
+                        "Asisten Dosen Struktur Data (C/C++)",
+                        "Asisten Dosen Dasar Pemrograman (C)",
+                    ],
+                    'organization' => [
+                        'Staf Divisi Riset dan Teknologi, Himpunan Mahasiswa Teknik Computer-Informatika ITS (2024-sekarang)',
+                    ],
+                    'skills' => ['C/C++'],
+                    'achievements' => [],
+                    'linkedin' => 'http://www.linkedin.com/in/frenaldyh',
                 ],
                 [
                     'name' => 'Nama Anggota 5', 'nrp' => 'NRP belum diisi', 'origin' => 'Asal daerah belum diisi',
@@ -121,7 +130,7 @@ class PageController extends Controller
                 [
                     'name' => 'Isabella Sienna Sulisthio', 'nrp' => '5025241199', 'origin' => 'Banjarmasin, Kalimantan Selatan',
                     'interest' => 'AI dan Computer Vision', 'role' => 'Pengolah data',
-                    'bio' => 'The only thing that is impossible is impossibility',
+                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik di bidang AI khususnya Computer Vision.',
                     'photo' => 'images/members/anggota-6.png', 
                     'education' => ['SMA Kristen Kanaan Banjarmasin (2021 - 2024)', 'Institut Teknologi Sepuluh Nopember (2024 - Sekarang)'],
                     'work' => ['Asisten Dosen Dasar Pemrograman 2025', 'Asisten Dosen Struktur Data 2026','Asisten Dosen Dasar Pemrograman 2026', 'Administrator Laboratorium ALPRO (Algoritma dan Pemrogaman) ITS'], 
