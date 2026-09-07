@@ -155,7 +155,7 @@ class PageController extends Controller
                 ],
                 [
                     'name' => 'Isabella Sienna Sulisthio', 'nrp' => '5025241199', 'origin' => 'Banjarmasin, Kalimantan Selatan',
-                    'interest' => 'AI dan Computer Vision', 'role' => 'Pengolah data',
+                    'interest' => 'AI dan Computer Vision', 'role' => 'Data Scientist',
                     'bio' => 'Saya adalah mahasiswa semester 5 Program Studi Teknik Informatika ITS yang tertarik di bidang AI khususnya Computer Vision.',
                     'photo' => 'images/members/anggota-6.png', 
                     'education' => ['SMA Kristen Kanaan Banjarmasin (2021 - 2024)', 'Institut Teknologi Sepuluh Nopember (2024 - Sekarang)'],
