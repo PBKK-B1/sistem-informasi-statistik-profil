@@ -1,161 +1,154 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Beranda')
 
 @section('content')
-    <section class="hero p-4 p-md-5 mb-4">
-        <p class="eyebrow mb-3">Profil kelompok</p>
-        <h1 class="display-5 fw-bold mb-3">Kelompok B1 - Teknik Informatika ITS</h1>
-        <p class="hero-description fs-5 mb-4" style="text-align: justify">Halaman ini berisi profil anggota kelompok 1 serta gambaran singkat mengenai proyek yang akan kami kerjakan sebagai final project.</p>
-        <div class="d-flex flex-wrap gap-2">
-            <a href="{{ route('project') }}" class="btn btn-light px-4 py-2 fw-semibold">Lihat ide proyek <span aria-hidden="true">&rarr;</span></a>
-        </div>
-    </section>
-    <section class="mb-4">
-        <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+    <section class="home-hero" aria-labelledby="home-title">
+        <div class="hero-content">
             <div>
-                <p class="eyebrow mb-1">Anggota Kelompok 1</p>
-                <h2 class="h3 mb-0">Kenali Anggota Kami</h2>
+                <p class="eyebrow">Profil Kelompok · PBKK B</p>
+                <h1 class="hero-title" id="home-title">Enam orang, minat yang beragam.<em>Satu tim.</em></h1>
             </div>
-            <span class="badge rounded-pill text-primary-emphasis bg-primary-subtle px-3 py-2">{{ count($students) }} mahasiswa</span>
+            <div class="hero-intro">
+                <p>Kami adalah Kelompok B1, mahasiswa Teknik Informatika ITS angkatan 2024 dengan minat yang bergerak dari rekayasa perangkat lunak dan keamanan siber hingga AI, data, dan gim.</p>
+                <a href="#anggota" class="btn btn-light px-4 py-3">Kenali tim <i class="bi bi-arrow-down ms-2" aria-hidden="true"></i></a>
+            </div>
         </div>
-        <div class="row g-4">
+        <aside class="hero-panel" aria-label="Ringkasan kelompok">
+            <div>
+                <span class="hero-panel-label">Anggota aktif</span>
+                <span class="hero-panel-number">0{{ count($students) }}</span>
+                <p class="hero-panel-copy">6 mahasiswa dengan fokus keilmuan yang dipertemukan dalam satu kelas dan satu proyek.</p>
+                <span class="visually-hidden">Nama Anggota 6 · Koordinator proyek</span>
+                <div class="avatar-stack" aria-label="Foto anggota kelompok">
+                    @foreach (array_slice($students, 0, 5) as $student)
+                        <img src="{{ asset($student['photo']) }}" alt="{{ $student['name'] }}">
+                    @endforeach
+                </div>
+            </div>
+            <div>
+                <div class="hero-panel-rule"></div>
+                <div class="micro-stat"><span>Angkatan</span><strong>2024</strong></div>
+                <div class="hero-panel-rule"></div>
+                <div class="micro-stat"><span>Final project</span><strong>Agentic AI</strong></div>
+            </div>
+        </aside>
+    </section>
+
+    <section class="members-section" id="anggota" aria-labelledby="members-title">
+        <div class="section-heading" data-reveal>
+            <div>
+                <p class="section-kicker">Orang-orang di balik B1</p>
+                <h2 id="members-title">Kenal lebih dekat dengan tim kami.</h2>
+            </div>
+        </div>
+
+        <div class="row member-grid">
             @foreach ($students as $student)
-                <div class="col-md-6 col-xl-4">
-                    <section class="card h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center gap-3 mb-4">
-                                <div class="avatar flex-shrink-0">
-                                    @if (! empty($student['photo']) && file_exists(public_path($student['photo'])))
-                                        <img src="{{ asset($student['photo']) }}" alt="Foto {{ $student['name'] }}">
-                                    @else
-                                        <img src="{{ asset('images/members/default-profile.svg') }}" alt="Foto profil default">
-                                    @endif
-                                </div>
-                                <div>
-                                    <p class="eyebrow mb-1">Anggota {{ $loop->iteration }}</p>
-                                    <h3 class="h4 mb-0">{{ $student['name'] }}</h3>
-                                </div>
-                            </div>
-                            <p class="student-bio text-muted small mb-4">{{ $student['bio'] }}</p>
-                            <dl class="row mb-0 profile-detail">
-                                <dt class="col-4 text-muted fw-normal mb-1">NRP</dt><dd class="col-8 fw-semibold mb-3">{{ $student['nrp'] }}</dd>
-                                <dt class="col-4 text-muted fw-normal mb-1">Asal daerah</dt><dd class="col-8 fw-semibold mb-3">{{ $student['origin'] }}</dd>
-                                <dt class="col-4 text-muted fw-normal mb-1">Minat</dt><dd class="col-8 fw-semibold mb-3">{{ $student['interest'] }}</dd>
-                            </dl>
-                            <button type="button" class="btn btn-outline-primary w-100 mt-4" data-bs-toggle="modal" data-bs-target="#profileModal{{ $loop->iteration }}">
-                                Lihat profil lengkap
+                <div class="col-md-6 col-xl-4" data-reveal>
+                    <article class="card member-card">
+                        <div class="member-visual">
+                            <span class="member-index">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                            @if (! empty($student['photo']) && file_exists(public_path($student['photo'])))
+                                <img src="{{ asset($student['photo']) }}" alt="Foto {{ $student['name'] }}" loading="lazy">
+                            @else
+                                <img src="{{ asset('images/members/default-profile.svg') }}" alt="Foto profil default" loading="lazy">
+                            @endif
+                            <span class="member-role">{{ ! empty($student['role']) ? $student['role'] : 'Mahasiswa Informatika' }}</span>
+                        </div>
+                        <div class="member-card-body">
+                            <h3>{{ $student['name'] }}</h3>
+                            <p class="member-origin"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>{{ $student['origin'] }}</p>
+                            <p class="member-interest">{{ $student['interest'] }}</p>
+                            <button type="button" class="member-action" data-bs-toggle="modal" data-bs-target="#profileModal{{ $loop->iteration }}" aria-label="Lihat profil lengkap {{ $student['name'] }}">
+                                Lihat perjalanan dan keahlian
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
                             </button>
                         </div>
-                    </section>
+                    </article>
                 </div>
             @endforeach
         </div>
     </section>
+
     @foreach ($students as $student)
         <div class="modal fade" id="profileModal{{ $loop->iteration }}" tabindex="-1" aria-labelledby="profileModalLabel{{ $loop->iteration }}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                <div class="modal-content border-0">
-                    <div class="modal-header px-4 pt-4">
+                <div class="modal-content">
+                    <div class="modal-header px-4 py-3">
                         <div>
-                            <p class="eyebrow mb-1">Profil anggota {{ $loop->iteration }}</p>
-                            <h2 class="modal-title h3" id="profileModalLabel{{ $loop->iteration }}">{{ $student['name'] }}</h2>
+                            <p class="eyebrow mb-1">Profil anggota {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</p>
+                            <h2 class="modal-title h3 mb-0" id="profileModalLabel{{ $loop->iteration }}">{{ $student['name'] }}</h2>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                     </div>
                     <div class="modal-body p-4">
-                        <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 mb-4">
-                            <div class="avatar avatar-lg flex-shrink-0">
-                                @if (! empty($student['photo']) && file_exists(public_path($student['photo'])))
-                                    <img src="{{ asset($student['photo']) }}" alt="Foto {{ $student['name'] }}">
-                                @else
-                                    <img src="{{ asset('images/members/default-profile.svg') }}" alt="Foto profil default">
-                                @endif
-                            </div>
+                        <div class="profile-intro d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 mb-4">
+                            @if (! empty($student['photo']) && file_exists(public_path($student['photo'])))
+                                <img class="profile-photo flex-shrink-0" src="{{ asset($student['photo']) }}" alt="Foto {{ $student['name'] }}">
+                            @else
+                                <img class="profile-photo flex-shrink-0" src="{{ asset('images/members/default-profile.svg') }}" alt="Foto profil default">
+                            @endif
                             <div class="text-center text-sm-start">
-                                <p class="text-muted mb-3">{{ $student['bio'] }}</p>
+                                <p class="mb-3">{{ $student['bio'] }}</p>
                                 <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-start">
-                                    @if ($student['linkedin'])
-                                        <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Profil LinkedIn</a>
-                                    @else
-                                        <span class="small text-muted">Tautan profesional belum diisi</span>
+                                    @if (! empty($student['linkedin']))
+                                        <a href="{{ $student['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light"><i class="bi bi-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
                                     @endif
-                                    @if (! empty($student['email']))
-                                        <a href="mailto:{{ $student['email'] }}" class="btn btn-sm btn-outline-secondary">Email: {{ $student['email'] }}</a>
-                                    @endif
+                                    <span class="btn btn-sm btn-outline-light disabled">NRP {{ $student['nrp'] }}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="profile-section">
-                                    <p class="eyebrow mb-2">Pendidikan</p>
-                                    <ul class="mb-0 ps-3">
-                                        @foreach ($student['education'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
+
+                        <div class="row g-3">
+                            @foreach ([
+                                ['Pendidikan', 'mortarboard', $student['education']],
+                                ['Pengalaman profesional', 'briefcase', $student['work']],
+                                ['Organisasi & kepanitiaan', 'people', $student['organization']],
+                                ['Prestasi & penghargaan', 'trophy', $student['achievements']],
+                            ] as [$title, $icon, $items])
+                                <div class="col-md-6">
+                                    <section class="profile-section">
+                                        <p class="eyebrow mb-2"><i class="bi bi-{{ $icon }}" aria-hidden="true"></i> {{ $title }}</p>
+                                        @if (count(array_filter($items)))
+                                            <ul class="mb-0 ps-3">
+                                                @foreach (array_filter($items) as $item)
+                                                    <li>{{ $item }}</li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <p class="small text-muted mb-0">Belum ada informasi yang ditambahkan.</p>
+                                        @endif
+                                    </section>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="profile-section">
-                                    <p class="eyebrow mb-2">Pengalaman Profesional</p>
-                                    <ul class="mb-0 ps-3">
-                                        @foreach ($student['work'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="profile-section">
-                                    <p class="eyebrow mb-2">Organisasi &amp; kepanitiaan</p>
-                                    <ul class="mb-0 ps-3">
-                                        @foreach ($student['organization'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="profile-section">
-                                    <p class="eyebrow mb-2">Prestasi &amp; penghargaan</p>
-                                    <ul class="mb-0 ps-3">
-                                        @foreach ($student['achievements'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach
                             <div class="col-12">
-                                <div class="profile-section">
-                                    <p class="eyebrow mb-2">Technical skills</p>
+                                <section class="profile-section">
+                                    <p class="eyebrow mb-2"><i class="bi bi-code-slash" aria-hidden="true"></i> Keahlian teknis</p>
                                     <div class="d-flex flex-wrap gap-2">
                                         @foreach ($student['skills'] as $skill)
-                                            <span class="badge rounded-pill text-primary-emphasis bg-primary-subtle px-3 py-2">{{ $skill }}</span>
+                                            <span class="skill-chip">{{ $skill }}</span>
                                         @endforeach
                                     </div>
-                                </div>
+                                </section>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer px-4 pb-4">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                    <div class="modal-footer px-4 py-3">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup profil</button>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
-    <div class="row g-4">
-        <div class="col-lg-12">
-            <section class="card h-100">
-                <div class="card-body p-4">
-                    <p class="eyebrow">Departemen kami</p>
-                    <h2 class="h4 mb-3">Teknik Informatika ITS</h2>
-                    <p class="text-muted" style="text-align: justify">Teknik Informatika ITS merupakan departemen yang berfokus pada pengembangan ilmu dan teknologi di bidang komputasi, perangkat lunak, data, serta berbagai penerapannya.</p>
-                    <a href="{{ route('about') }}" class="fw-semibold text-decoration-none">Kenali departemen <span aria-hidden="true">&rarr;</span></a>
-                </div>
-            </section>
+
+    <section class="department-feature" data-reveal aria-labelledby="department-title">
+        <img src="{{ asset('images/facilities/departemen-informatika.jpg') }}" alt="Gedung Departemen Teknik Informatika ITS" loading="lazy">
+        <div class="department-content">
+            <p class="eyebrow">Ruang tempat kami bertumbuh</p>
+            <h2 id="department-title">Teknik Informatika ITS.</h2>
+            <p>Lingkungan belajar yang mempertemukan fondasi komputasi, riset, kreativitas, dan persoalan nyata, dari algoritma hingga kecerdasan artifisial.</p>
+            <a href="{{ route('about') }}" class="btn btn-light align-self-start px-4 py-3 mt-2">Jelajahi departemen <i class="bi bi-arrow-up-right ms-2" aria-hidden="true"></i></a>
         </div>
-    </div>
+    </section>
 @endsection

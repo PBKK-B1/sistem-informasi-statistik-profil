@@ -5,7 +5,7 @@ Website profil akademik enam anggota Kelompok 1, Teknik Informatika ITS.
 ## Arsitektur
 
 URL → routes/web.php → PageController → Blade View.
-Semua route halaman menggunakan PageController. Layout bersama memakai Bootstrap 5 melalui CDN, tanpa npm atau Vite.
+Semua route halaman menggunakan PageController. Layout bersama memakai Bootstrap 5, sedangkan stylesheet dan interaksi khusus dibangun melalui Vite.
 
 ## Menjalankan
 
@@ -21,11 +21,13 @@ if (!(Test-Path .env)) { Copy-Item .env.example .env }
 php artisan key:generate
 if (!(Test-Path database/database.sqlite)) { New-Item database/database.sqlite -ItemType File }
 php artisan migrate
+npm install
+npm run build
 php artisan serve
 ```
 
-Setelah setup, cukup jalankan `php artisan serve`.
-Koneksi internet diperlukan untuk memuat Bootstrap dari CDN.
+Setelah setup, jalankan `npm run build` saat aset frontend berubah, kemudian `php artisan serve`.
+Koneksi internet diperlukan untuk memuat Bootstrap, Bootstrap Icons, dan webfont.
 
 ## URL
 

@@ -1,49 +1,70 @@
 @extends('layouts.app')
 
-@section('title', 'Project Idea')
+@section('title', 'Ide Proyek')
 
 @section('content')
-    <header class="hero p-4 p-md-5 mb-4">
-        <p class="eyebrow">Ide proyek Kelompok 1 · Agentic AI</p>
-        <h1 class="display-5 fw-bold mb-3">ITS Academic Assistant</h1>
-        <p class="hero-description fs-5 mb-3">Kami membayangkan asisten akademik yang membantu mahasiswa menemukan informasi kampus, merapikan rencana belajar, dan mengingat tugas yang sering terlewat. Fokusnya bukan menggantikan keputusan mahasiswa, tetapi membantu mereka mengambil langkah berikutnya.</p>
-        <span class="badge border border-light-subtle rounded-pill px-3 py-2">Tahap konsep</span>
-    </header>
-    <div class="row g-4 mb-4">
-        <div class="col-md-6">
-            <section class="card h-100"><div class="card-body p-4">
-                <p class="eyebrow">01 / Masalah</p>
-                <h2 class="h4">Informasi tersebar, waktu terbatas.</h2>
-                <p class="text-muted mb-0">Informasi kuliah sering tersebar di banyak tempat. Saat jadwal sedang padat, mencari pengumuman, mencatat tenggat, dan menentukan prioritas bisa menghabiskan waktu yang seharusnya dipakai untuk belajar.</p>
-            </div></section>
+    <section class="project-hero" aria-labelledby="project-title">
+        <div class="project-copy">
+            <p class="eyebrow">Final project · Agentic AI</p>
+            <h1 id="project-title">ITS Academic Assistant.</h1>
+            <p>Asisten akademik yang membantu mahasiswa menemukan informasi kampus, menyusun rencana belajar, dan menjaga tenggat tetap terlihat. Keputusan akhir tetap berada di tangan pengguna.</p>
+            <span class="project-status">Tahap konsep &amp; eksplorasi</span>
         </div>
-        <div class="col-md-6">
-            <section class="card h-100"><div class="card-body p-4">
-                <p class="eyebrow">02 / Solusi</p>
-                <h2 class="h4">Satu asisten untuk rencana yang terarah.</h2>
-                <p class="text-muted mb-0">Pengguna dapat bertanya dengan bahasa sehari-hari, lalu menerima rangkuman beserta sumber yang bisa diperiksa. Untuk rencana belajar dan pengingat, pengguna tetap meninjau dan menyetujui hasilnya sebelum digunakan.</p>
-            </div></section>
+        <div class="assistant-map" aria-label="Empat area bantuan ITS Academic Assistant">
+            <span class="orbit-label one">Informasi</span>
+            <span class="orbit-label two">Rencana studi</span>
+            <span class="orbit-label three">Pengingat</span>
+            <span class="orbit-label four">Rekomendasi</span>
+            <div class="map-core"><span><i class="bi bi-stars" aria-hidden="true"></i><strong>Academic<br>Assistant</strong></span></div>
         </div>
-    </div>
-    <section class="mb-4">
-        <p class="eyebrow">03 / Fitur Utama</p>
-        <h2 class="h3 mb-3">Hal yang ingin kami bantu</h2>
-        <div class="row g-3">
+    </section>
+
+    <section class="problem-solution" aria-label="Masalah dan solusi" data-reveal>
+        <article class="story-column">
+            <span class="story-index">01</span>
+            <h2>Informasi tersebar, sementara waktu terbatas.</h2>
+            <p>Pengumuman, tenggat, dan rujukan akademik sering berada di banyak kanal. Ketika jadwal padat, mahasiswa menghabiskan energi hanya untuk menemukan kembali informasi yang dibutuhkan.</p>
+        </article>
+        <article class="story-column">
+            <span class="story-index">02</span>
+            <h2>Satu pintu untuk langkah yang lebih terarah.</h2>
+            <p>Pengguna dapat bertanya dengan bahasa sehari-hari, mendapatkan rangkuman dengan rujukan, lalu meninjau rekomendasi sebelum memasukkannya ke rencana belajar atau daftar tugas.</p>
+        </article>
+    </section>
+
+    <section aria-labelledby="features-title" data-reveal>
+        <div class="section-heading">
+            <div><p class="section-kicker">Empat kemampuan inti</p><h2 id="features-title">Membantu pada momen yang benar-benar penting.</h2></div>
+            <p>Fokus proyek bukan membuat keputusan otomatis, tetapi mengurangi friksi agar mahasiswa dapat mengambil keputusan dengan informasi yang lebih jelas.</p>
+        </div>
+        <div class="feature-grid">
             @foreach ([
-                ['Pencarian informasi akademik', 'Tanya jawab tentang informasi akademik dengan rujukan sumber untuk membantu mahasiswa memverifikasi jawaban.'],
-                ['Perencanaan studi', 'Usulan rencana studi berdasarkan minat, beban SKS, dan prasyarat mata kuliah untuk ditinjau bersama dosen wali.'],
-                ['Pengingat tenggat tugas', 'Pengelolaan daftar tugas dan pengingat agar mahasiswa dapat menyusun prioritas sebelum tenggat.'],
-                ['Rekomendasi belajar personal', 'Saran materi dan jadwal belajar sesuai kebutuhan, target, serta perkembangan belajar pengguna.'],
-            ] as [$title, $description])
-                <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body p-4">
-                    <h3 class="h5">{{ $title }}</h3><p class="text-muted mb-0">{{ $description }}</p>
-                </div></div></div>
+                ['search', 'Pencarian informasi akademik', 'Tanya jawab dengan rangkuman dan rujukan sumber sehingga jawaban tetap dapat diverifikasi.'],
+                ['diagram-3', 'Perencanaan studi', 'Usulan mata kuliah berdasarkan minat, beban SKS, dan prasyarat untuk ditinjau bersama dosen wali.'],
+                ['calendar2-check', 'Pengingat tenggat', 'Daftar tugas yang membantu mahasiswa melihat prioritas dan menghindari pekerjaan yang terlewat.'],
+                ['graph-up-arrow', 'Rekomendasi belajar personal', 'Saran materi serta ritme belajar yang mempertimbangkan target dan perkembangan pengguna.'],
+            ] as [$icon, $title, $description])
+                <article class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-{{ $icon }}" aria-hidden="true"></i></span>
+                    <h3>{{ $title }}</h3>
+                    <p>{{ $description }}</p>
+                </article>
             @endforeach
         </div>
     </section>
-    <section class="card"><div class="card-body p-4">
-        <p class="eyebrow">04 / Dampak yang Diharapkan</p>
-        <h2 class="h4">Lebih terorganisasi, lebih fokus belajar.</h2>
-        <p class="text-muted mb-0">Proyek ini diharapkan mengurangi waktu pencarian informasi, membantu mahasiswa menghindari tugas yang terlewat, dan mendukung keputusan studi yang lebih terarah. Keberhasilannya dapat dievaluasi melalui ketepatan informasi, penyelesaian tugas tepat waktu, serta umpan balik mahasiswa.</p>
-    </div></section>
+
+    <section class="impact-panel" aria-labelledby="impact-title" data-reveal>
+        <div>
+            <p class="eyebrow text-white">Dampak yang dituju</p>
+            <h2 id="impact-title">Lebih teratur. Lebih fokus belajar.</h2>
+        </div>
+        <div>
+            <p>Keberhasilan tidak hanya dilihat dari banyaknya fitur, tetapi dari apakah sistem membantu mahasiswa bergerak lebih cepat dan percaya diri.</p>
+            <div class="impact-list">
+                <div><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Waktu pencarian informasi lebih singkat</span></div>
+                <div><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Tugas dan tenggat lebih mudah dipantau</span></div>
+                <div><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Keputusan studi memiliki konteks yang lebih jelas</span></div>
+            </div>
+        </div>
+    </section>
 @endsection
