@@ -143,7 +143,7 @@ class PageController extends Controller
                     'name' => 'Hoshida Ahmad Tsalatsu Fadlulloh', 'nrp' => '5025241174', 'origin' => 'Surabaya, Jawa Timur',
                     'interest' => 'Game Development', 'role' => '',
                     'bio' => 'Saya Adalah Mahasiswa Semester 5 Program Studi Teknik Informatika ITS yang tertarik di bidang Game Development',
-                    'photo' => 'images/members/anggota-2.jpg', 
+                    'photo' => 'images/members/anggota-5.jpg', 
                     'education' => [
                     'SMAN 20 Surabaya (2021 - 2024)',
                     'Institut Teknologi Sepuluh Nopember (2024 - Sekarang)',
