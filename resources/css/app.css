@@ -26,6 +26,25 @@
     display: block;
 }
 
+.about-description {
+    width: 100%;
+    max-width: none;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.about-page p {
+    text-align: justify;
+}
+
+.about-page .card p {
+    line-height: 1.65;
+}
+
+.about-page .gallery-caption p {
+    max-width: 55rem;
+}
+
 @media (max-width: 575.98px) {
     #facilityCarousel,
     #facilityCarousel .carousel-inner,

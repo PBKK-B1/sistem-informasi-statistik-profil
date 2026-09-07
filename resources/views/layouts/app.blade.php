@@ -32,6 +32,10 @@
         #facilityCarousel, #facilityCarousel .carousel-inner, #facilityCarousel .carousel-item, .gallery-frame { height: 22rem; }
         .gallery-frame { border-radius: 1rem; overflow: hidden; border: 1px solid #dce5f2; background: #fff; }
         .facility-image { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+        .about-description { width: 100%; max-width: none; line-height: 1.7; text-align: justify; }
+        .about-page p { text-align: justify; }
+        .about-page .card p { line-height: 1.65; }
+        .about-page .gallery-caption p { max-width: 55rem; }
         @media (max-width: 575.98px) { #facilityCarousel, #facilityCarousel .carousel-inner, #facilityCarousel .carousel-item, .gallery-frame { height: 18rem; } }
         .gallery-caption { background: linear-gradient(180deg, rgba(20,46,80,0), rgba(20,46,80,.78)); color: #fff; }
         main { flex: 1; }
@@ -61,7 +65,7 @@
             </div>
         </div>
     </nav>
-    <main id="main-content" class="container py-4 py-md-5">
+    <main id="main-content" class="@yield('main_class', 'container') py-4 py-md-5">
         @yield('content')
     </main>
     <footer class="border-top bg-white py-4 mt-4">

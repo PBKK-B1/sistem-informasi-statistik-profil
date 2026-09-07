@@ -2,27 +2,30 @@
 
 @section('title', 'About')
 
+@section('main_class', 'container-fluid px-4 px-xl-5')
+
 @section('content')
-    {{-- Hero --}}
-    <header class="mb-5">
+    <div class="about-page">
+        {{-- Hero --}}
+        <header class="mb-5">
         <p class="eyebrow">Tentang Departemen</p>
         <h1 class="display-6 fw-bold mb-3">Teknik Informatika ITS</h1>
-        <p class="text-muted fs-5 col-lg-9" style="text-align: justify;">
+        <p class="text-muted fs-5 about-description">
             Departemen Teknik Informatika ITS menjadi tempat kami mempelajari
             berbagai bidang informatika, mulai dari algoritma dan pengembangan
             perangkat lunak hingga kecerdasan buatan, pengelolaan informasi,
             jaringan komputer, dan keamanan siber.
         </p>
-    </header>
+        </header>
 
-    {{-- Intro + Facility Carousel --}}
-    <div class="row g-4 mb-4">
+        {{-- Intro + Facility Carousel --}}
+        <div class="row g-4 mb-4">
         <div class="col-lg-5">
             <section class="card h-100">
                 <div class="card-body p-4 p-md-5">
                     <p class="eyebrow mb-2">Informatika di ITS</p>
                     <h2 class="h4 mb-3">Lebih dari sekadar pemrograman</h2>
-                    <p class="text-muted mb-0" style="text-align: justify;">
+                    <p class="text-muted mb-0 about-description">
                         Pembelajaran di Teknik Informatika ITS mencakup berbagai
                         bidang komputasi yang digunakan untuk memahami,
                         merancang, dan mengembangkan sistem serta teknologi
@@ -60,7 +63,7 @@
 
                                     <div class="gallery-caption position-absolute bottom-0 start-0 end-0 p-4">
                                         <h3 class="h5 mb-1">{{ $facility['title'] }}</h3>
-                                        <p class="mb-0 small">{{ $facility['description'] }}</p>
+                                        <p class="mb-0 small about-description">{{ $facility['description'] }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +82,7 @@
                 </div>
             </section>
         </div>
-    </div>
+        </div>
 
     {{-- Quick Information --}}
     <div class="row g-4 mb-4">
@@ -105,7 +108,7 @@
         <div class="mb-3">
             <p class="eyebrow mb-1">Bidang Keilmuan</p>
             <h2 class="h3 mb-2">Apa yang dipelajari?</h2>
-            <p class="text-muted col-lg-8" style="text-align: justify">
+            <p class="text-muted about-description">
                 Bidang keilmuan di Informatika ITS mencakup berbagai aspek
                 pengembangan perangkat lunak, sistem cerdas, data, jaringan,
                 hingga penerapan komputasi.
@@ -169,7 +172,7 @@
         <div class="mb-3">
             <p class="eyebrow mb-1">Fasilitas</p>
             <h2 class="h3 mb-2">Mendukung kegiatan belajar dan penelitian</h2>
-            <p class="text-muted col-lg-8" style="text-align: justify">
+            <p class="text-muted about-description">
                 Departemen Teknik Informatika ITS menyediakan berbagai fasilitas
                 untuk mendukung perkuliahan, penelitian, diskusi, dan kegiatan
                 mahasiswa.
@@ -203,7 +206,7 @@
         <div class="card-body p-4 p-md-5">
             <p class="eyebrow mb-1">Akademik</p>
             <h2 class="h4 mb-3">Program Studi</h2>
-            <p class="text-muted col-lg-9 mb-4" style="text-align: justify;">
+            <p class="text-muted mb-4 about-description">
                 Departemen Teknik Informatika ITS menyelenggarakan pendidikan
                 pada berbagai jenjang dan bidang yang berkaitan dengan
                 informatika, rekayasa perangkat lunak, serta kecerdasan
@@ -273,4 +276,6 @@
             </a>
         </div>
     </section>
+
+    </div>
 @endsection
