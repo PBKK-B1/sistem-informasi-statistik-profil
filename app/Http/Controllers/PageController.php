@@ -151,7 +151,7 @@ class PageController extends Controller
                     'work' => [''], 
                     'organization' => ['Moderator Cybertwenty SMAN 20 Surabaya'],
                     'skills' => ['C/C++, SQL, Canva, Microsoft Excel'], 
-                    'achievements' => [''], 'linkedin' => https://www.linkedin.com/in/hoshida-ahmad-tsalatsu-fadlulloh-328167323/,
+                    'achievements' => [''], 'linkedin' => 'https://www.linkedin.com/in/hoshida-ahmad-tsalatsu-fadlulloh-328167323/',
                 ],
                 [
                     'name' => 'Isabella Sienna Sulisthio', 'nrp' => '5025241199', 'origin' => 'Banjarmasin, Kalimantan Selatan',
