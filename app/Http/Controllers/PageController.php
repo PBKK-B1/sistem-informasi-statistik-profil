@@ -121,8 +121,8 @@ class PageController extends Controller
                 ],
                 [
                     'name' => 'Frenaldy Bestabba Hasugian', 'nrp' => '5025241156', 'origin' => 'Pontianak, Kalimantan Barat',
-                    'interest' => 'software engineer & Cyber Security', 'role' => '',
-                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
+                    'interest' => 'Software Engineer & Cyber Security', 'role' => '',
+                    'bio' => 'Saya adalah mahasiswa semester 5 Program Studi Teknik Informatika ITS yang tertarik menjadi profesional di bidang software engineer.',
                     'photo' => 'images/members/anggota-4.png',
                     'education' => [
                         "Institut Teknologi Sepuluh Nopember (ITS)\nS1 Teknik Informatika (2024 - Sekarang) · IPK: 3.61/4.00",
@@ -140,8 +140,8 @@ class PageController extends Controller
                     'linkedin' => 'http://www.linkedin.com/in/frenaldyh',
                 ],
                 [
-                    'name' => 'Hoshida Ahmad Tsalatsu Fadlulloh', 'nrp' => '5025241174', 'origin' => 'Surabaya',
-                    'interest' => 'Game Development, ', 'role' => '',
+                    'name' => 'Hoshida Ahmad Tsalatsu Fadlulloh', 'nrp' => '5025241174', 'origin' => 'Surabaya, Jawa Timur',
+                    'interest' => 'Game Development', 'role' => '',
                     'bio' => 'Saya Adalah Mahasiswa Semester 5 Program Studi Teknik Informatika ITS yang tertarik di bidang Game Development',
                     'photo' => 'images/members/anggota-2.jpg', 
                     'education' => [
@@ -156,7 +156,7 @@ class PageController extends Controller
                 [
                     'name' => 'Isabella Sienna Sulisthio', 'nrp' => '5025241199', 'origin' => 'Banjarmasin, Kalimantan Selatan',
                     'interest' => 'AI dan Computer Vision', 'role' => 'Pengolah data',
-                    'bio' => 'Saya adalah mahasiswa semester 4 Program Studi Teknik Informatika ITS yang tertarik di bidang AI khususnya Computer Vision.',
+                    'bio' => 'Saya adalah mahasiswa semester 5 Program Studi Teknik Informatika ITS yang tertarik di bidang AI khususnya Computer Vision.',
                     'photo' => 'images/members/anggota-6.png', 
                     'education' => ['SMA Kristen Kanaan Banjarmasin (2021 - 2024)', 'Institut Teknologi Sepuluh Nopember (2024 - Sekarang)'],
                     'work' => ['Asisten Dosen Dasar Pemrograman 2025', 'Asisten Dosen Struktur Data 2026','Asisten Dosen Dasar Pemrograman 2026', 'Administrator Laboratorium ALPRO (Algoritma dan Pemrogaman) ITS'], 
@@ -168,27 +168,42 @@ class PageController extends Controller
         ]);
     }
 
-    public function about(): View
+    public function about()
     {
-        return view('about', [
-            'facilities' => [
-                [
-                    'title' => 'Ruang kelas dan diskusi',
-                    'description' => 'Tempat untuk belajar bareng, presentasi tugas, dan ngobrol santai setelah kelas.',
-                    'image' => 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
-                ],
-                [
-                    'title' => 'Laboratorium komputasi',
-                    'description' => 'Ruang yang biasa dipakai untuk praktikum, eksperimen, dan pengerjaan proyek.',
-                    'image' => 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
-                ],
-                [
-                    'title' => 'Area kolaborasi',
-                    'description' => 'Ruang yang cocok buat diskusi singkat, kerja kelompok, atau menyiapkan ide tugas.',
-                    'image' => 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
-                ],
+        $facilities = [
+             [
+                'title' => 'Departemen Teknik Informatika ITS',
+                'description' => 'Gedung utama Departemen Teknik Informatika ITS yang menjadi pusat kegiatan akademik, pembelajaran, dan aktivitas mahasiswa.',
+                'image' => asset('images/facilities/departemen-informatika.jpg'),
             ],
-        ]);
+            [
+                'title' => 'Laboratorium',
+                'description' => 'Pusat pembelajaran dan penelitian untuk berbagai bidang keilmuan Informatika.',
+                'image' => asset('images/facilities/laboratorium.jpg'),
+            ],
+            [
+                'title' => 'Ruang Kelas',
+                'description' => 'Ruang perkuliahan dengan fasilitas pendukung pembelajaran dan konektivitas.',
+                'image' => asset('images/facilities/ruang-kelas.jpg'),
+            ],
+            [
+                'title' => 'Ruang Sidang',
+                'description' => 'Ruang yang digunakan untuk kegiatan akademik seperti sidang tugas akhir, rapat, dan presentasi.',
+                'image' => asset('images/facilities/ruang-sidang.jpeg'),
+            ],
+            [
+                'title' => 'Student Center Prof. Supeno',
+                'description' => 'Ruang untuk berdiskusi, berkolaborasi, dan menjalankan kegiatan mahasiswa.',
+                'image' => asset('images/facilities/plaza-supeno.jpg'),
+            ],
+             [
+                'title' => 'Aula Prof. Handayani Tjandrasa',
+                'description' => 'Aula yang digunakan untuk berbagai kegiatan akademik, seminar, presentasi, dan kegiatan departemen.',
+                'image' => asset('images/facilities/aula-handayani.jpeg'),
+            ],
+        ];
+
+        return view('about', compact('facilities'));
     }
 
     public function project(): View

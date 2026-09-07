@@ -5,18 +5,17 @@
 @section('content')
     <section class="hero p-4 p-md-5 mb-4">
         <p class="eyebrow mb-3">Profil kelompok</p>
-        <h1 class="display-5 fw-bold mb-3">Kami Kelompok 1 dari Teknik Informatika ITS.</h1>
-        <p class="hero-description fs-5 mb-4">Halaman ini kami buat untuk memperkenalkan siapa saja yang ada di dalam tim, apa yang sedang kami pelajari, dan bagaimana kami menyusun ide proyek dengan cara yang sederhana dan bisa diikuti.</p>
+        <h1 class="display-5 fw-bold mb-3">Kelompok B1 - Teknik Informatika ITS</h1>
+        <p class="hero-description fs-5 mb-4" style="text-align: justify">Halaman ini berisi profil anggota kelompok 1 serta gambaran singkat mengenai proyek yang akan kami kerjakan sebagai final project.</p>
         <div class="d-flex flex-wrap gap-2">
             <a href="{{ route('project') }}" class="btn btn-light px-4 py-2 fw-semibold">Lihat ide proyek <span aria-hidden="true">&rarr;</span></a>
-            <a href="{{ route('about') }}" class="btn btn-outline-light px-4 py-2 fw-semibold">Lihat About</a>
         </div>
     </section>
     <section class="mb-4">
         <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
             <div>
-                <p class="eyebrow mb-1">Kenalan dulu</p>
-                <h2 class="h3 mb-0">Enam orang, minat yang beragam</h2>
+                <p class="eyebrow mb-1">Anggota Kelompok 1</p>
+                <h2 class="h3 mb-0">Kenali Anggota Kami</h2>
             </div>
             <span class="badge rounded-pill text-primary-emphasis bg-primary-subtle px-3 py-2">{{ count($students) }} mahasiswa</span>
         </div>
@@ -151,9 +150,9 @@
         <div class="col-lg-12">
             <section class="card h-100">
                 <div class="card-body p-4">
-                    <p class="eyebrow">Tentang kami</p>
-                    <h2 class="h4 mb-3">Belajar sambil bikin sesuatu yang benar-benar kepakai.</h2>
-                    <p class="text-muted">Kami masih belajar, jadi kami sengaja menulis halaman ini dengan bahasa yang lebih wajar dan dekat dengan cara bicara sehari-hari. Harapannya, pengunjung bisa cepat menangkap siapa kami, apa yang kami kerjakan, dan kenapa proyek ini dibuat.</p>
+                    <p class="eyebrow">Departemen kami</p>
+                    <h2 class="h4 mb-3">Teknik Informatika ITS</h2>
+                    <p class="text-muted" style="text-align: justify">Teknik Informatika ITS merupakan departemen yang berfokus pada pengembangan ilmu dan teknologi di bidang komputasi, perangkat lunak, data, serta berbagai penerapannya.</p>
                     <a href="{{ route('about') }}" class="fw-semibold text-decoration-none">Kenali departemen <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </section>

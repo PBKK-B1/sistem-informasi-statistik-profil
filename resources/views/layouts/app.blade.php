@@ -29,8 +29,10 @@
         .profile-detail { overflow-wrap: anywhere; }
         .student-bio, .profile-detail dd, .profile-section p, .profile-section li { text-align: justify; }
         .profile-section { height: 100%; padding: 1rem; border: 1px solid #e1e7f0; border-radius: .85rem; background: #f8fafd; }
+        #facilityCarousel, #facilityCarousel .carousel-inner, #facilityCarousel .carousel-item, .gallery-frame { height: 22rem; }
         .gallery-frame { border-radius: 1rem; overflow: hidden; border: 1px solid #dce5f2; background: #fff; }
-        .gallery-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .facility-image { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+        @media (max-width: 575.98px) { #facilityCarousel, #facilityCarousel .carousel-inner, #facilityCarousel .carousel-item, .gallery-frame { height: 18rem; } }
         .gallery-caption { background: linear-gradient(180deg, rgba(20,46,80,0), rgba(20,46,80,.78)); color: #fff; }
         main { flex: 1; }
         a:focus-visible, button:focus-visible { outline: 3px solid #e7aa32; outline-offset: 3px; }
@@ -41,7 +43,7 @@
     <nav class="navbar navbar-expand-lg border-bottom py-3" aria-label="Navigasi utama">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="{{ route('home') }}">
-                <span class="brand-mark">B1</span> Kelompok 1
+               Kelompok 1
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Buka navigasi">
                 <span class="navbar-toggler-icon"></span>
@@ -64,8 +66,8 @@
     </main>
     <footer class="border-top bg-white py-4 mt-4">
         <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 small text-muted">
-            <span>Kelompok 1</span>
             <span>Pemrograman Berbasis Kerangka Kerja (B)</span>
+            <span>Kelompok 1</span>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
