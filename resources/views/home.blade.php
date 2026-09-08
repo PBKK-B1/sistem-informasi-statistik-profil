@@ -21,7 +21,7 @@
                 <p class="hero-panel-copy">6 mahasiswa dengan fokus keilmuan yang dipertemukan dalam satu kelas dan satu proyek.</p>
                 <span class="visually-hidden">Nama Anggota 6 · Koordinator proyek</span>
                 <div class="avatar-stack" aria-label="Foto anggota kelompok">
-                    @foreach (array_slice($students, 0, 5) as $student)
+                    @foreach (array_slice($students, 0, 6) as $student)
                         <img src="{{ asset($student['photo']) }}" alt="{{ $student['name'] }}">
                     @endforeach
                 </div>
