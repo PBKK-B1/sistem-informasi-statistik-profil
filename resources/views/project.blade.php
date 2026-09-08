@@ -8,7 +8,7 @@
             <p class="eyebrow">Final project · Agentic AI</p>
             <h1 id="project-title">ITS Academic Assistant.</h1>
             <p>Asisten akademik yang membantu mahasiswa menemukan informasi kampus, menyusun rencana belajar, dan menjaga tenggat tetap terlihat. Keputusan akhir tetap berada di tangan pengguna.</p>
-            <span class="project-status">Tahap konsep &amp; eksplorasi</span>
+            <!-- <span class="project-status">Tahap konsep &amp; eksplorasi</span> -->
         </div>
         <div class="assistant-map" aria-label="Empat area bantuan ITS Academic Assistant">
             <span class="orbit-label one">Informasi</span>

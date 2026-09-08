@@ -21,7 +21,7 @@
     <nav class="site-nav navbar navbar-expand-lg" aria-label="Navigasi utama">
         <div class="container-xl">
             <a class="site-brand navbar-brand" href="{{ route('home') }}" aria-label="Kelompok B1, Beranda">
-                <span class="brand-symbol" aria-hidden="true">B1</span>
+                <!-- <span class="brand-symbol" aria-hidden="true">B1</span> -->
                 <span class="brand-copy">
                     <strong>Kelompok B1<span class="visually-hidden"> (Kelompok 1)</span></strong>
                     <small>Informatika ITS</small>
