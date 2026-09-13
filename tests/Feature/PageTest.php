@@ -26,6 +26,28 @@ class PageTest extends TestCase
             ->assertSeeText('Koordinator proyek');
     }
 
+    public function test_student_profile_is_available_by_nrp(): void
+    {
+        $this->get('/mahasiswa/5025241017')
+            ->assertOk()
+            ->assertSeeText('Mitra Partogi')
+            ->assertSeeText('5025241017');
+
+        $this->get('/mahasiswa/0000000000')->assertNotFound();
+    }
+
+    public function test_agent_route_reuses_the_project_page_with_an_optional_theme(): void
+    {
+        $this->get('/agent')
+            ->assertOk()
+            ->assertSeeText('ITS Academic Assistant')
+            ->assertSeeText('General Assistant Agent');
+
+        $this->get('/agent/Academic%20Planner')
+            ->assertOk()
+            ->assertSeeText('Academic Planner');
+    }
+
     #[DataProvider('calculations')]
     public function test_calculator_outputs_results_and_safe_errors(string $url, string $expected): void
     {

@@ -8,8 +8,12 @@ class PageController extends Controller
 {
     public function index(): View
     {
-        return view('home', [
-            'students' => [
+        return view('home', ['students' => $this->students()]);
+    }
+
+    private function students(): array
+    {
+        $students = [
                 [
                     'name' => 'Mitra Partogi',
                     'nrp' => '5025241017',
@@ -164,8 +168,22 @@ class PageController extends Controller
                     'skills' => ['C', 'C++', 'SQL', 'Python', 'Web Programming', 'Figma', 'Canva', 'Microsoft Office', 'Lainnya'], 
                     'achievements' => ['Juara 9 OSN-K Kota Banjarmasin Bidang Informatika Tahun 2023'], 'linkedin' => 'https://www.linkedin.com/in/isabellasienna',
                 ],
-            ],
-        ]);
+        ];
+
+        return array_map(static function (array $student): array {
+            $student['nrp'] = blank($student['nrp'] ?? null) ? '0' : (string) $student['nrp'];
+
+            return $student;
+        }, $students);
+    }
+
+    public function showStudent(string $nrp): View
+    {
+        $student = collect($this->students())->firstWhere('nrp', $nrp);
+
+        abort_unless($student, 404);
+
+        return view('student', compact('student'));
     }
 
     public function about()
@@ -206,9 +224,9 @@ class PageController extends Controller
         return view('about', compact('facilities'));
     }
 
-    public function project(): View
+    public function project(string $tema = 'General Assistant Agent'): View
     {
-        return view('project');
+        return view('project', ['tema' => $tema]);
     }
 
     public function calculate(string $angka1, string $angka2, string $operasi): View

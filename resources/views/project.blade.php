@@ -5,7 +5,7 @@
 @section('content')
     <section class="project-hero" aria-labelledby="project-title">
         <div class="project-copy">
-            <p class="eyebrow">Final project · Agentic AI</p>
+            <p class="eyebrow">Final project · Agentic AI · {{ $tema }}</p>
             <h1 id="project-title">ITS Academic Assistant.</h1>
             <p>Asisten akademik yang membantu mahasiswa menemukan informasi kampus, menyusun rencana belajar, dan menjaga tenggat tetap terlihat. Keputusan akhir tetap berada di tangan pengguna.</p>
             <!-- <span class="project-status">Tahap konsep &amp; eksplorasi</span> -->

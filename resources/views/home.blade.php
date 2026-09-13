@@ -60,10 +60,10 @@
                             <h3>{{ $student['name'] }}</h3>
                             <p class="member-origin"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>{{ $student['origin'] }}</p>
                             <p class="member-interest">{{ $student['interest'] }}</p>
-                            <button type="button" class="member-action" data-bs-toggle="modal" data-bs-target="#profileModal{{ $loop->iteration }}" aria-label="Lihat profil lengkap {{ $student['name'] }}">
+                            <a class="member-action" href="{{ route('students.show', ['nrp' => $student['nrp']]) }}" aria-label="Lihat profil lengkap {{ $student['name'] }}">
                                 Lihat perjalanan dan keahlian
                                 <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                            </button>
+                            </a>
                         </div>
                     </article>
                 </div>

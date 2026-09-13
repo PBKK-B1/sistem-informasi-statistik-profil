@@ -32,8 +32,11 @@ Koneksi internet diperlukan untuk memuat Bootstrap, Bootstrap Icons, dan webfont
 ## URL
 
 - http://127.0.0.1:8000/
+- http://127.0.0.1:8000/mahasiswa/5025241017
 - http://127.0.0.1:8000/about
 - http://127.0.0.1:8000/project-idea
+- http://127.0.0.1:8000/agent
+- http://127.0.0.1:8000/agent/Academic%20Planner
 - http://127.0.0.1:8000/hitung/10/5/kali
 - http://127.0.0.1:8000/hitung/10/5/tambah
 - http://127.0.0.1:8000/hitung/10/5/kurang
